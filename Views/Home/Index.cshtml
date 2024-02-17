@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "QrViewer";
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="~/favicon.ico" rel="icon" type="image/ico"/>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/apicall.js"></script>
+</head>
+<body>
+    <header>
+        <div style="display: inline-block; width:f;height:inherit;">
+            <img class="HeaderLogo" src="~/lib/HeaderImage.png"/>
+            <h1 class="HeaderTitle" >QrViewer</h1>
+            <img class="Menu" onclick="openNav()" src="~/menu.png" />
+        </div>
+    </header>
+    @{
+    <div class="card">
+        <img id="QrCode" class="QrCode" src="">
+        <p class="Title"></p>
+         <div class="container">
+            <p class="Title"></p>
+            <p id="ContentEncode" class="Title"></p>
+            <p style="padding-bottom: 10%;">@DateTime.Now.ToLongDateString()</p>
+         </div>
+    </div>
+    }
+    <div id="options" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">Generate new Qr</a>
+        <a href="Home/ScannedQr">Show scanned Qr</a>
+    </div>
+</body>

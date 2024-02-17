@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;
+}
+
+p.Title {
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Franklin Gothic';
+}
+.Menu{
+    position:absolute;
+    left:95%;
+    top:4%;
+    max-width:30px;
+    height:auto;
+    
+}
+
+p {
+    text-align: center;
+    font-family: 'Franklin Gothic';
+}
+
+header {
+    background: white;
+    height: 80px;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(90deg,#c94b4b,#4b134f);
+    background-size: 200%;
+    animation: grad_anim 15s ease infinite;
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+    position: relative;
+    animation: lift 2s ease forwards;
+}
+
+img.QrCode {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    border-radius: 20px;
+    width: 38%;
+    height:auto;
+}
+
+img.HeaderLogo {
+    position:relative;
+    display: inline-block;
+    height: 70%;
+    width: auto;
+    left: 20px;
+    top: 10px;
+}
+
+.HeaderTitle {
+    position: relative;
+    font-weight: 700;
+    font-size: 34px;
+    display: inline-block;
+    left: 50px;
+    bottom: 5px;
+    font-family: 'Franklin Gothic';
+}
+
+.card {
+    display:inline-block;
+    background-color: white;
+    border-radius: 40px;
+    width: 20%;
+    margin: 25px;
+}
+
+.sidepanel {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    top: 80px;
+    right: 0px;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 1s;
+}
+
+    .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        font-family: 'Franklin Gothic';
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+    }
+
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.Menu {
+    cursor: pointer;
+    border: none;
+}
+.Menu:hover {
+    cursor: pointer;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidepanel {
+        padding-top: 15px;
+    }
+}
+
+@keyframes lift {
+    0% {
+        bottom: 5px
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+@keyframes grad_anim {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
